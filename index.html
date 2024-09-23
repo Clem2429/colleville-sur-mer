@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colleville-sur-Mer</title>
+    <link rel="shortcut icon" href="img/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/accueil.css">
+</head>
+<body>
+    <div class="main-title">
+        <img src="img/icons/favicon.png" alt="Cimetière américain de Colleville-sur-Mer, vu du haut">
+        <a href="index.html">Colleville-sur-Mer</a>
+    </div>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Lorem</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a>
+        <a href="#">Site</a>
+    </nav>
+    <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+    </button>
+
+    <section class="main-section">
+        <img class="presentation-picture" src="img/images/cimetiere_americain.jpg" alt="Cimetière américain d'Omaha Beach">
+        <h1 class="title-page">
+            Colleville-sur-Mer
+        </h1>
+        <div class="container-main-links">
+            <a href="#id">Toute notre Actualité !</a>
+            <a href="">Découvrez la ville !</a>
+        </div>
+    
+    </section>
+    <section>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="img/images/ciel-omaha.jpg" width="100%" height="400px" alt="Bassin du Cimetière américain de Colleville-sur-Mer">
+                    <p class="title-slider">Découvrez Colleville-sur-Mer !</p>
+                    <p class="description-slider">Avec ses magnifiques paysages, Colleville-sur-Mer est l'une des plus belles villes de la côté normande...</p>
+                    <a class="link-slider" href="#">En Savoir <span>+</span></a>
+                </div>
+                <div class="slide">
+                    <img src="img/images/cimetiere_panorama.jpg" width="100%" height="400px" alt="Bassin du Cimetière américain de Colleville-sur-Mer">
+                    <p class="title-slider">Découvrez le Cimetière américain !</p>
+                    <p class="description-slider">Avec ses plus de 9 380 tombes, c'est un mémorial à ciel ouvert pour les soldats américains tombés au combat...</p>
+                    <a class="link-slider" href="#">En Savoir <span>+</span></a>
+                </div>
+                <div class="slide">
+                    <img src="img/images/omaha-beach.jpeg" width="100%" height="400px" alt="Bassin du Cimetière américain de Colleville-sur-Mer">
+                    <p class="title-slider">Découvrez Omaha Beach</p>
+                    <p class="description-slider">Arpentez l'une des cinq plages du Débarquement où ont débarqué des milliers de soldats américains...</p>
+                    <a class="link-slider" href="#">En Savoir <span>+</span></a>
+                </div>
+                <div class="slide">
+                    <img src="img/images/bassin-cimetiere.jpg" width="100%" height="400px" alt="Bassin du Cimetière américain de Colleville-sur-Mer">
+                    <p class="title-slider">Découvrez l'Histoire</p>
+                    <p class="description-slider">Apprenez en plus sur le Débarquement des alliés en Normandie, le 6 juin 1944...</p>
+                    <a class="link-slider" href="#">En Savoir <span>+</span></a>
+                </div>
+            </div>
+    
+            <!-- Flèches de navigation -->
+            <div class="arrow left-arrow" id="prev">&#10094;</div>
+            <div class="arrow right-arrow" id="next">&#10095;</div>
+        </div>
+    </section>
+    <section class="map-news">
+
+
+
+        <aside class="aside-box container-map">
+            <div class="box-map">
+                <iframe id="iframe" width="100%" height="353px" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.8747005462646485%2C49.337259503643544%2C-0.816335678100586%2C49.364991839223116&amp;layer=mapnik&amp;marker=49.351127625670614%2C-0.8455181121826172"></iframe>
+            </div>
+            <div class="box-map">
+                <h2>Situez-vous :</h2>
+                <button id="btn1" class="active" style="border-top: 1.5px solid #760a0a;" onclick="changeIframe('https://www.openstreetmap.org/export/embed.html?bbox=-0.8747005462646485%2C49.337259503643544%2C-0.816335678100586%2C49.364991839223116&amp;layer=mapnik&amp;marker=49.351127625670614%2C-0.8455181121826172', 'btn1')">Colleville-sur-Mer</button>
+                <button id="btn2" onclick="changeIframe('https://www.openstreetmap.org/export/embed.html?bbox=-0.8476665616035463%2C49.347897156689605%2C-0.8458426594734193%2C49.348763841449255&amp;layer=mapnik&amp;marker=49.348330500977895%2C-0.8467546105384827', 'btn2')">Mairie</button>
+                <button id="btn3" onclick="changeIframe('https://www.openstreetmap.org/export/embed.html?bbox=-0.8515369892120362%2C49.34692015944362%2C-0.8442413806915284%2C49.35038687571882&amp;layer=mapnik&amp;marker=49.348653548116594%2C-0.8478891849517822', 'btn3')">Église</button>
+                <button id="btn4" onclick="changeIframe('https://www.openstreetmap.org/export/embed.html?bbox=-0.860581398010254%2C49.35569553194312%2C-0.8459901809692384%2C49.362627483469666&amp;layer=mapnik&amp;marker=49.35916162984097%2C-0.8532857894897461', 'btn4')">Cimetière américain</button>
+                <button id="btn5" style="border-bottom: 1.5px solid #760a0a;" onclick="changeIframe('https://www.openstreetmap.org/export/embed.html?bbox=-0.8589935302734376%2C49.362029739045305%2C-0.8516979217529298%2C49.365495390537774&amp;layer=mapnik&amp;marker=49.363762595324445%2C-0.8553457260131836', 'btn5')">Omaha Beach</button>
+            </div>
+
+        </aside>
+        <aside class="aside-box news">
+            <h2>Quelques Chiffres</h2>  
+            <br>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </aside>
+    </section>
+
+    <footer>
+        <div class="link-footer"><a href="#">Accueil</a></div>
+        <div class="link-footer"><a href="#">Visiter la Ville</a></div>
+        <div class="link-footer"><a href="#">Toute l'Actualité</a></div>
+        <div class="link-footer"><a href="#">L'Histoire de la Ville</a></div>
+    </footer>
+    
+</body>
+<script async src="js/site.js"></script>
+<script async src="js/accueil.js"></script>
+</html>

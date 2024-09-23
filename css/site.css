@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Great+Vibes&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAV */
+
+.main-title {
+    position: absolute;
+    left: 22.5px;
+    top: 11px;
+    display: flex;
+    align-items: center;
+    font-family: "Fira Sans";
+    font-weight: bold;
+    font-size: 30px;
+    z-index: 3;
+}
+
+.main-title a {
+    text-decoration: none;
+    color: #760a0a;
+    transition: 0.2s;
+    transform: translateX(0);
+    transition: transform 0.4s;
+}
+
+.main-title a:hover {
+    transition: 0.2s;
+    transform: translateX(7.5px);
+    transition: transform 0.4s;
+
+}
+
+.main-title img {
+    height: 45px;
+    margin-right: 7.5px;
+}
+
+.nav-toggler {
+    position: fixed;
+    z-index: 10;
+    top: 17.5px;
+    right: 22.5px;
+    height: 30px;
+    width: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #760a0a;
+    transition: transform 0.3s ease-out,
+    opacity 0.1s ease-out;
+}
+
+.l1 {
+    transform: translateY(-10px)
+}
+
+.l3 {
+    transform: translateY(10px)
+}
+
+.nav-toggler.active .l1 {
+    transform: translateY(0px) rotate(135deg);
+}
+
+.nav-toggler.active .l2 {
+    opacity: 0;
+}
+
+.nav-toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+}
+
+nav {
+    position: fixed;
+    width: 350px;
+    min-height: 100vh;
+    z-index: 9;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 1px solid #cfcfcf;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(7.5px);
+    backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav.active {
+    transform: translate(0);
+}
+
+nav a {
+    font-family: Quicksand, sans-serif;
+    color: #760a0a;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    transition: 0.2s;
+    font-size: 22px;
+}
+
+/* MAIN SECTION */
+
+.presentation-picture {
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100vh;
+    opacity: 0.8;
+}
+
+.title-page {
+    font-size: 70px;
+    color: #fff;
+    font-family: "Fira Sans";
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    text-align: center;
+    letter-spacing: 3px;
+    width: 100%;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.main-section .container-main-links {
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+    display: flex;
+    gap: 60px;
+}
+
+.main-section .container-main-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 17px;
+    border-radius: 10px;
+    font-family: "Cinzel", arial;
+    letter-spacing: 2px;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    position: relative;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: scaleX(0);
+        transition: 0.3s transform ease-in-out;
+    }
+    &:hover::after {
+            transform: scaleX(1);
+        }
+}
+
+
+/* BODY */
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #760a0a;
+}
+
+footer .link-footer {
+    width: 20%;
+    text-align: center;
+}
+
+footer .link-footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    font-family: "Cinzel";
+
+    &:after {
+       content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        transform: scaleX(0); 
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+    }
+    &:hover:after {
+        transform: scaleX(1);
+    }
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+    .main-title {
+        left: 7.5px;
+        top: 10px;
+        font-size: 25px;
+    }
+    .nav-toggler {
+        position: fixed;
+        right: 10px;
+    }    
+    nav {
+        position: fixed;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: none;
+    }
+    nav a {
+        font-size: 22px;
+    }
+    .title-page {
+        font-size: 31px;
+        width: 100%;
+    }
+    .main-section .container-main-links {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 80%;
+        text-align: center;
+    }
+    .main-section .container-main-links a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 30px;
+        font-size: 17px;
+        border-radius: 10px;
+        font-family: "Cinzel", arial;
+        letter-spacing: 2px;
+        background: rgba(255, 255, 255, 0.07);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        position: relative;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: scaleX(0);
+            transition: 0.3s transform ease-in-out;
+        }
+        &:hover::after {
+                transform: scaleX(1);
+            }
+    }
+}
