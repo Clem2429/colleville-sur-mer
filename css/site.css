@@ -307,4 +307,16 @@ footer .link-footer a {
                 transform: scaleX(1);
             }
     }
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 8px;
+    }
+    footer .link-footer {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+    footer .link-footer a {
+        font-size: 16px;
+    }
 }
