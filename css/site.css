@@ -192,14 +192,6 @@ nav a:hover {
         }
 }
 
-
-/* BODY */
-
-
-
-
-
-
 /* FOOTER */
 
 footer {
@@ -262,6 +254,9 @@ footer .link-footer a {
     }
     nav a {
         font-size: 22px;
+    }
+    .presentation-picture {
+        opacity: 0.95;
     }
     .title-page {
         font-size: 31px;
