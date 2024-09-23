@@ -105,6 +105,7 @@
 .map-news {
     display: flex;
     padding: 0 10px 0 20px;
+    gap: 20px;
 }
 
 /* MAP */
@@ -165,7 +166,40 @@ iframe {
 
 .news {
     width: 22.5%;
-    /* outline: 1px solid grey; */
+    height: 353px;
+    border-left: 1.5px solid #760a0a;
+}
+
+.news h2 {
+    color:#760a0a;
+    text-align: center;
+    font-family: "Cinzel";
+}
+
+.news ul {
+    margin-left: 25px;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #760a0a;
+}
+
+.news ul li {
+    list-style-type: "»  ";
+}
+
+.news ul li a {
+    text-decoration: underline;
+    color: #760a0a;
+    position: absolute;
+    transform: translateX(0);
+
+    transition: transform 0.3s ease-out;
+}
+
+.news ul li a:hover {
+    text-decoration: underline dotted;
+    transform: translateX(5px);
+    transition: transform 0.3s ease-out;
 }
 
 
