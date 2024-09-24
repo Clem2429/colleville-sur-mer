@@ -580,7 +580,14 @@ button.news:hover {
         border-top: none;
         border-left: 1.5px solid #760a0a;
         border-right: 1.5px solid #760a0a;
-    } 
+    }
+    .flip-card {
+        height: 250px;
+    }
+    .flip-card-back {
+        padding: 7.5px;
+        text-align: left;
+    }
     .info-card {
         font-size: 14px;
     }
