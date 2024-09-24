@@ -14,3 +14,18 @@ function changeIframe(url, activeButtonId) {
         activeButton.classList.add('active');
     }
 }
+
+const toggleButton = document.getElementById('toggleButton');
+const hiddenBoxes = document.querySelectorAll('.hidden');
+
+toggleButton.addEventListener('click', () => {
+    hiddenBoxes.forEach(box => {
+        box.classList.toggle('hidden');
+    });
+
+    if (toggleButton.innerText === 'Afficher +') {
+        toggleButton.innerText = 'Afficher -';
+    } else {
+        toggleButton.innerText = 'Afficher +';
+    }
+});
