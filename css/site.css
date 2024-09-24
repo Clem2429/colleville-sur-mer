@@ -152,6 +152,7 @@ nav a:hover {
     width: 100%;
     opacity: 1;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .main-section .container-main-links {
