@@ -10,47 +10,21 @@ function toggleNav(){
   navigation.classList.toggle("active")
 }
 
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+// GO TOP
 
-const slider = document.querySelector('.slider');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-function showSlide(index) {
-    // Si l'index dépasse le dernier slide, revenir au premier (effet de "tourner")
-    if (index >= totalSlides) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = totalSlides - 1;
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 100) { 
+        scrollToTopBtn.style.display = 'block';
     } else {
-        currentIndex = index;
+        scrollToTopBtn.style.display = 'none';
     }
-    // Translation de la position de la slide actuelle
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-// Flèches de navigation
-nextButton.addEventListener('click', nextSlide);
-prevButton.addEventListener('click', prevSlide);
-
-// Slider automatique
-let autoSlide = setInterval(nextSlide, 4000);
-
-// Arrêter et redémarrer le défilement automatique quand l'utilisateur interagit
-document.querySelector('.slider-container').addEventListener('mouseenter', () => {
-    clearInterval(autoSlide);
 });
 
-document.querySelector('.slider-container').addEventListener('mouseleave', () => {
-    autoSlide = setInterval(nextSlide, 4000);
+scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Défilement fluide
+    });
 });

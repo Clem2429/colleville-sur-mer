@@ -1,16 +1,55 @@
+// SLIDE
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+const slider = document.querySelector('.slider');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+function showSlide(index) {
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+let autoSlide = setInterval(nextSlide, 4000);
+
+document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+    clearInterval(autoSlide);
+});
+
+document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+    autoSlide = setInterval(nextSlide, 4000);
+});
+
 // MAP
 
 function changeIframe(url, activeButtonId) {
-    // Changer l'URL de l'iframe
     document.getElementById('iframe').src = url;
 
-    // Retirer la classe 'active' de tous les boutons
     var buttons = document.querySelectorAll('button');
     buttons.forEach(function(button) {
         button.classList.remove('active');
     });
 
-    // Ajouter la classe 'active' au bouton cliqué
     var activeButton = document.getElementById(activeButtonId);
     if (activeButton) {
         activeButton.classList.add('active');
@@ -42,21 +81,17 @@ const months = document.querySelectorAll('.month-box');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const month = button.getAttribute('data-month');
-        
-        // Masquer tous les mois
+
         months.forEach(box => {
             box.style.display = 'none';
         });
 
-        // Afficher le mois sélectionné
         document.getElementById(month).style.display = 'flex';
 
-        // Supprimer la classe active de tous les boutons
         buttons.forEach(btn => {
             btn.classList.remove('active');
         });
 
-        // Ajouter la classe active au bouton cliqué
         button.classList.add('active');
     });
 });
