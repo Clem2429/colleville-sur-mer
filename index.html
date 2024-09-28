@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="img/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/accueil.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-title">
@@ -162,7 +163,7 @@
         <button class="news" id="toggleButton">Afficher +</button>
     </section>
     <section class="agenda">
-        <h2>» CALENDRIER «</h2>
+        <h2>»&ensp;CALENDRIER</h2>
         <div class="month-buttons">
             <button class="month-btn" data-month="janvier">Janvier</button>
             <button class="month-btn" data-month="fevrier">Février</button>
@@ -557,6 +558,37 @@
             </div>
 
             <p class="info-card">&#8505; Pour + d'Informations, survolez les cartes !</p>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>»&ensp;CONTACT</h2>
+        <form method="post" action="" id="contactForm">
+            <div class="form-group">
+                <img src="img/icons/user.svg" class="icon" alt="Icone Utilisateur">
+                <input type="text" id="user" name="user" required placeholder=" ">
+                <label for="user">Nom</label>
+            </div>
+
+            <div class="form-group">
+                <img src="img/icons/email.svg" class="icon" alt="Icone email">
+                <input type="text" id="email" name="email" required placeholder=" ">
+                <label for="email">E-mail</label>
+            </div>
+
+            <div class="form-group">
+                <img src="img/icons/objet.svg" class="icon" alt="Icone objet">
+                <input type="text" id="objet" name="objet" required placeholder=" ">
+                <label for="objet">Objet</label>
+            </div>
+
+            <label for="message">Votre message</label><br>
+            <textarea type="text" id="message" name="message" required placeholder="Votre message..."></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div id="popup" class="popup">
+            <p>Votre message a été envoyé avec succès !</p>
         </div>
     </section>
 

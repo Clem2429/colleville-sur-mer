@@ -96,3 +96,24 @@ buttons.forEach(button => {
     });
 });
 
+// CONTACT
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Affiche la popup
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    popup.classList.add('show');
+
+    setTimeout(function() {
+        popup.classList.remove('show');
+        popup.classList.add('hide');
+        setTimeout(function() {
+            popup.style.display = 'none';
+            popup.classList.remove('hide');
+        }, 500);
+    }, 3000);
+
+    this.reset();
+});
