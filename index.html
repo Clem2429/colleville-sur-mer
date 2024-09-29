@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="img/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/accueil.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-title">
@@ -22,7 +21,7 @@
         <a href="#">Dolor</a>
         <a href="#">Site</a>
     </nav>
-    <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
+    <button  type="button" aria-label="toggle curtain navigation" class="nav-toggler">
         <span class="line l1"></span>
         <span class="line l2"></span>
         <span class="line l3"></span>
@@ -32,6 +31,13 @@
         <img src="img/icons/arrow_up.svg" alt="Remonter en haut de la page"/>
     </div>
 
+    <div id="loader">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <main>
     <section class="main-section">
         <img class="presentation-picture" src="img/images/cimetiere_americain.jpg" alt="Cimetière américain d'Omaha Beach">
         <h1 class="title-page">
@@ -72,7 +78,6 @@
                 </div>
             </div>
     
-            <!-- Flèches de navigation -->
             <div class="arrow left-arrow" id="prev">&#10094;</div>
             <div class="arrow right-arrow" id="next">&#10095;</div>
         </div>
@@ -560,7 +565,7 @@
             <p class="info-card">&#8505; Pour + d'Informations, survolez les cartes !</p>
         </div>
     </section>
-    <section class="contact">
+    <section>
         <h2>»&ensp;CONTACT</h2>
         <form method="post" action="" id="contactForm">
             <div class="form-group">
@@ -591,7 +596,7 @@
             <p>Votre message a été envoyé avec succès !</p>
         </div>
     </section>
-
+    </main>
     <footer>
         <div class="link-footer"><a href="#">Accueil</a></div>
         <div class="link-footer"><a href="#">Visiter la Ville</a></div>

@@ -155,6 +155,42 @@ nav a:hover {
     transform: scale(1.1); /* Agrandir l'image au survol */
 }
 
+/* LOADER */
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-container {
+    width: 80%;
+    max-width: 500px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #760a0a;
+    transition: width 0.2s ease;
+}
+
+body.loaded #loader {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out;
+}
+
 /* MAIN SECTION */
 
 .presentation-picture {
@@ -263,6 +299,10 @@ footer .link-footer a {
 /* RESPONSIVE */
 
 @media screen and (max-width: 1000px) {
+    .progress-container {
+        width: 100%;
+        max-width: 300px;
+    }
     .main-title {
         left: 7.5px;
         top: 10px;
