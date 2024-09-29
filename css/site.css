@@ -8,6 +8,20 @@
     box-sizing: border-box;
 }
 
+/* BODY */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: hidden;
+
+    &.loaded {
+        overflow-y: visible;
+    }
+}
+
 /* NAV */
 
 .main-title {

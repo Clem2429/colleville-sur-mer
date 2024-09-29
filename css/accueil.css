@@ -6,6 +6,20 @@
     box-sizing: border-box;
 }
 
+/* INDICATOR SCROLL */
+
+#scrollIndicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 7.5px;
+    background-color: #760a0a;
+    z-index: 30;
+}
+
+/* SLIDER */
+
 .slider-container {
     position: relative;
     width: 70%;
@@ -507,6 +521,22 @@ button.news:hover {
     color: grey;
 }
 
+/* HISTOIRE */
+
+.histoire {
+    padding: 20px;
+    color: #760a0a;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.histoire h2 {
+    color: #760a0a;
+    font-family: "Cinzel", arial;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
 /* CONTACT */
 
 .contact {
@@ -862,6 +892,9 @@ button[type="submit"]:hover {
     }
     .info-card {
         font-size: 14px;
+    }
+    .histoire {
+        padding: 10px;
     }
     .contact {
         padding: 10px;
