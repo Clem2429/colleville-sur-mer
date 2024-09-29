@@ -35,11 +35,6 @@ window.addEventListener("load", function() {
     let progressBar = document.getElementById('progress-bar');
     let loader = document.getElementById('loader');
     
-    if (sessionStorage.getItem('pageLoaded')) {
-        document.body.classList.add('loaded');
-        return;
-    }
-
     let images = document.querySelectorAll('img');
     let totalElements = images.length;
     let loadedElements = 0;
@@ -52,9 +47,7 @@ window.addEventListener("load", function() {
         if (loadedElements === totalElements) {
             setTimeout(function() {
                 document.body.classList.add('loaded');
-                
-                sessionStorage.setItem('pageLoaded', 'true');
-            }, 500); 
+            }, 500);
         }
     }
 
